@@ -1,6 +1,6 @@
 import { View } from "@croquet/croquet"
 import jsonpatch from 'fast-json-patch';
-import { Channel } from "../src/model/subscriptions/channel.js";
+import { Channel } from "./channel.js";
 
 export class ProxyView extends View {
 
