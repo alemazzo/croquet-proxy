@@ -70,8 +70,8 @@ export class ProxyView extends View {
         this.checkDataUpdate()
         let subscription = new Channel(scope, event)
         if (this.subscriptions[subscription.key]) {
+            console.log("Emitting event", scope, event, data)
             this.subscriptions[subscription.key].forEach(socket => {
-                console.log("Emitting event", scope, event, data)
                 socket.emit("event", scope, event, data)
             })
         }
