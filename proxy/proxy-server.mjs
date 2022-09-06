@@ -1,6 +1,6 @@
 import { Session } from "@croquet/croquet";
 import { Server } from "socket.io";
-import { ProxyView } from "./proxy-view.js";
+import { ProxyView } from "./proxy-view.mjs";
 
 export class CroquetProxyServer {
 

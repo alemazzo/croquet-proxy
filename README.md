@@ -3,9 +3,10 @@ A proxy for the Croquet platform.
 
 ## How to use
 1. Install [Node.js](https://nodejs.org/en/download/)
-2. Clone this repository
-3. Run `npm install` in the repository directory
-4. Define your own Model
+2. Create the project directory and navigate to it
+3. Run `npm init` and follow the instructions
+4. Run `npm install croquet-proxy`
+5. Define your own Model
 ```javascript
 // my-model.js
 import { Model } from '@croquet/croquet';
@@ -26,10 +27,10 @@ class MyModel extends Model {
     }
 }
 ```
-5. Define the starting point of your application
+6. Define the starting point of your application
 ```javascript
 // my-app.js
-import { CroquetProxyServer } from './proxy/proxy-server.js';
+import { CroquetProxyServer } from 'croquet-proxy';
 import { MyModel } from './my-model.js';
 const apiKey = ""
 const appId = ""
