@@ -14,7 +14,7 @@ class MyModel extends Model {
         super.init(options);
 
         // Define your model data always in the 'data' property
-        this.data = { counter = 0 }
+        this.data = { counter: 0 }
 
         this.future(1000).tick()
     }
