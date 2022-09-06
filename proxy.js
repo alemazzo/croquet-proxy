@@ -8,4 +8,12 @@ const name = "test-new-version"
 const password = "password"
 
 
-CroquetProxyServer.start(CounterModel, [CounterModel], apiKey, appId, name, password)
+CroquetProxyServer.start({
+    mainModelClass: CounterModel,
+    allModelClasses: [CounterModel],
+    apiKey: apiKey,
+    appId: appId,
+    name: name,
+    password: password,
+    port: 3000
+})

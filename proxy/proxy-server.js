@@ -4,9 +4,9 @@ import { ProxyView } from "./proxy-view.js";
 
 export class CroquetProxyServer {
 
-    static start(mainModelClass, allModelClasses, apiKey, appId, name, password, port = 3000) {
-        let server = new CroquetProxyServer(mainModelClass, allModelClasses, apiKey, appId, name, password)
-        server.run(port)
+    static start(options) {
+        let server = new CroquetProxyServer(options.mainModelClass, options.allModelClasses, options.apiKey, options.appId, options.name, options.password)
+        server.run(options.port)
     }
 
     constructor(mainModelClass, allModelClasses, apiKey, appId, name, password) {
