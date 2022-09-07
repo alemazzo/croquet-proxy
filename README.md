@@ -9,7 +9,7 @@ A proxy for the Croquet platform.
 5. Define your own Model
 ```javascript
 // my-model.js
-import { Model } from '@croquet/croquet';
+import { Model } from 'croquet-proxy';
 class MyModel extends Model {
     init(options) {
         super.init(options);
