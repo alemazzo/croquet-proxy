@@ -1,2 +1,4 @@
-export * from './proxy/proxy-server.mjs'
-export * from '@croquet/croquet'
+export { ApplicationModel }
+from './proxy/application-model.mjs'
+export { ComponentModel }
+from './proxy/component-model.mjs'

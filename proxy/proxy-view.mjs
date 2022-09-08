@@ -8,15 +8,15 @@ export class ProxyView extends View {
         super(model)
         this.model = model
         this.sockets = []
-        this.observer = jsonpatch.observe(this.model.data)
+        this.observer = jsonpatch.observe(this.model.dataModel.data)
         this.subscriptions = {}
     }
 
     addSocket(socket) {
         this.sockets.push(socket)
 
-        console.log("Emitting data to client", this.model.data)
-        socket.emit("data", this.model.data)
+        console.log("Emitting data to client", this.model.dataModel.data)
+        socket.emit("data", this.model.dataModel.data)
 
         socket.on("subscribe", (scope, event) => {
             let subscription = new Channel(scope, event)
